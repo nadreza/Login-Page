@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Sistema de login</title>
+    <style>
+
+    body{ 
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+    }
+    form{
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+    }
+    input{
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        box-sizing: border-box;
+    }
+    button{
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    </style>
+
+
+
+</head>
+<body>
+    
+
+<form id = "loginForm">
+    <label for = "username"> Usuário:</label>
+    <input type="text" id = "username" name = "username" required>
+
+    <label for = "senha">Senha:</label>
+    <input type="password" id = "password" name = "password" required>
+
+    <button type="button" onclick="login()">logar</button>
+</form>
+
+<script>
+    function login (){
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        if(username === "usuário" && password === "senha"){
+            console.log("Sessão iniciada")
+        }else{
+            console.log("Não poderá iniciar a sessão")
+        }
+    }
+
+
+</script>
+
+
+
+
+
+</body>
+</html>
